@@ -1,0 +1,29 @@
+package com.recursion;
+
+import java.util.Scanner;
+
+public class Factorial {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number");
+		int num =sc.nextInt();
+		factorial(1,num,1);
+	}
+	
+	public static int factorial(int fact,int num,int start) {
+		
+		if(start>num) {
+			return 0;
+		}else {
+			
+			fact=num*start;
+			System.out.println(fact);
+		}
+		
+		
+		return factorial(fact,num,start+1);
+	}
+
+}
